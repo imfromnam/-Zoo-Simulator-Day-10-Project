@@ -1,0 +1,82 @@
+print ("PROJECT: ZOO SIMULATOR Day 10\nMade by Geraldo Dieterle")
+print ("\n")
+#---------------------------------------------------------
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        print(f"{self.name} has entered the zoo.")
+    
+    def eat(self):
+        print(f"{self.name} is eating.")
+        return self
+    
+    def sleep(self):
+        print(f"{self.name} is sleeping.")
+        return self
+        
+#---------------------------------------------------------
+class Lion(Animal):
+    def __init__(self, name):
+        super().__init__(name)
+    
+    def roar(self):
+        print(f"{self.name} roars loudly! 🦁")
+        return self
+    
+    def eat(self):  # method override
+        print(f"{self.name} is eating meat.")
+        return self
+ #---------------------------------------------------------     
+ 
+class Shark(Animal):
+        def __init__(self, name):
+            super().__init__(name)
+        def swim(self):
+            print(f"{self.name} is swimming fast! 🦈")
+            return self
+
+#---------------------------------------------------------
+class Rabbit(Animal):
+        def __init__(self, name):
+            super().__init__(name)
+        def hop(self):
+            print(f"{self.name} is hopping! 🐇")
+            return self
+
+#---------------------------------------------------------
+class Hawk(Animal):
+        def __init__(self, name):
+            super().__init__(name)
+        
+        def fly(self):
+            print(f"{self.name} is flying high! 🦅")
+            return self 
+
+#---------------------------------------------------------
+lion = Lion("Simba")
+lion.eat().sleep().roar()
+print ("#--------------------------------------------------")
+#---------------------------------------------------------
+print(" ")
+
+rabbit = Rabbit("snow bunny")
+rabbit.eat().hop().sleep()
+print ("#--------------------------------------------------")
+#---------------------------------------------------------
+print(" ")
+
+shark = Shark("Shark AkA ripper")
+shark.swim().eat().sleep()
+print ("#--------------------------------------------------")
+#---------------------------------------------------------
+print(" ")
+
+hawk = Hawk("Hwak Aka mad fly")
+hawk.fly().eat().sleep()
+
+print ("#--------------------------------------------------")
+#---------------------------------------------------------
+
+
+
+
